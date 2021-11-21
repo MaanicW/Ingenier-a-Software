@@ -14,9 +14,10 @@
 <div class="contenedor-actividad">
     <div class="contenedor-datos">
         <div class="division justify-content-center">
-            <div class="container row ">
-                {{#each scholars}}
-                <div class="col-md-3 p-1">
+            <div class="container row">
+                <div class="row">
+                    {{#each scholars}}
+                <div class="col-sm p-2">
                     <div class="card text-center">
                         <div class="card-body">
                             <img src="../../../../img/ejemplo1.png"
@@ -32,7 +33,7 @@
                                 Ver
                             </a>
                             <!--<a href="/scholarss/delete/{{id_conv}}" class="btn btn-danger">Eliminar</a> -->
-                            <button onclick="borrar({{id_beca}})" class="btn btn-danger mt-1">
+                            <button onclick="borrar({{id_beca}})" class="btn btn-danger">
                                 Eliminar
                                 <i class="fas fa-trash-alt"></i>
                             </button>
@@ -46,6 +47,7 @@
                     </div>
                 </div>
                 {{/each}}
+                </div>
             </div>
         </div>
     </div>

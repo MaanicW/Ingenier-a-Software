@@ -14,38 +14,39 @@
 <div class="contenedor-actividad">
     <div class="contenedor-datos">
         <div class="division justify-content-center">
-            <div class="container col ">
-                {{#each announs}}
-                <div class="row-md-3 p-2">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <img src="../../../../img/ejemplo1.png"
-                                class="card-img-top img-card-img" alt=" " />
-                            <h5 class="card-title text-uppercase">{{titulo}}</h5>
-                            <p class="mt-2">{{descripcion}}</p>
-                            <a href="/announs/edit/{{id_conv}}" class="btn btn-secondary">
-                                <i class="fas fa-pen"></i>
-                                Editar
-                            </a>
-                            <a href="/announs/view/{{id_conv}}" class="btn btn-primary">
-                                <i class="fas fa-eye"></i>
-                                Ver
-                            </a>
-                            <!--<a href="/announs/delete/{{id_conv}}" class="btn btn-danger">Eliminar</a> -->
-                            <button onclick="borrar({{id_conv}},'{{estado}}')" class="btn btn-danger">
-                                Eliminar
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
+            <div class="container col">
+                <div class="row">
+                    {{#each announs}}
+                    <div class="col-sm p-2">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <img src="../../../../img/ejemplo1.png" class="card-img-top img-card-img" alt=" " />
+                                <h5 class="card-title text-uppercase">{{titulo}}</h5>
+                                <p class="mt-2">{{descripcion}}</p>
+                                <a href="/announs/edit/{{id_conv}}" class="btn btn-secondary">
+                                    <i class="fas fa-pen"></i>
+                                    Editar
+                                </a>
+                                <a href="/announs/view/{{id_conv}}" class="btn btn-primary">
+                                    <i class="fas fa-eye"></i>
+                                    Ver
+                                </a>
+                                <!--<a href="/announs/delete/{{id_conv}}" class="btn btn-danger">Eliminar</a> -->
+                                <button onclick="borrar({{id_conv}},'{{estado}}')" class="btn btn-danger">
+                                    Eliminar
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {{else}}
-                <div class="col-md-4 mx-auto">
-                    <div class="card card-body text-center">
-                        <p>No hay convocatorias registradas aún.</p>
+                    {{else}}
+                    <div class="col-md-4 mx-auto">
+                        <div class="card card-body text-center">
+                            <p>No hay convocatorias registradas aún.</p>
+                        </div>
                     </div>
+                    {{/each}}
                 </div>
-                {{/each}}
             </div>
         </div>
     </div>
@@ -84,8 +85,8 @@
                 //showCancelButton: true,
                 confirmButtonText: 'Confirmar',
                 cancelButtonText: 'Cancelar',
-            }); 
-        }else if(estado == 'En proceso' || estado == 'Finalizado'){
+            });
+        } else if (estado == 'En proceso' || estado == 'Finalizado') {
             Swal.fire({
                 title: '¿Estás seguro de que deseas eliminar la actividad?',
                 text: 'Se eliminarán también los registros de los participantes a dicha actividad, así como los reportes.',
