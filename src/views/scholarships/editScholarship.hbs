@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contenedorDos p-2">
+                    <div class="contenedorDos">
                         <div class="form-group mb-3">
                             <textarea name="descripcion" rows="5" class="form-control textarea"
                                 placeholder="Descripción" required>{{scholar.descripcion}}</textarea>
@@ -114,9 +114,26 @@
                                     <option value="University of Pennsylvania">University of Pennsylvania</option>
                                 </select>
                             </div>
+                            <div class="form-group mt-3">
+                                <div class="form-text">
+                                    ¿Cuenta con convenio?:
+                                </div>
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label for="viaticos">
+                                                <input type="radio" name="viaticos" id="option1" autocomplete="off" value="Sí"> Sí
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="viaticos" id="option2" autocomplete="off" value="No"> No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="datos">
-                            <div class="columna p-2">
+                            <div class="columna">
                                 <div class="form-group mb-3">
                                     <div class="form-text">
                                         Semestres dirigidos:
